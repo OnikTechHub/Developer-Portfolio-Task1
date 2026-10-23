@@ -82,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') toggleMenu(false);
     });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+        toggleMenu(false);
+      }
+    });
   }
 
   // Active Navigation Link Scroll Spy
@@ -223,22 +229,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!project || !projectModal || !modalContent) return;
 
     modalContent.innerHTML = `
-      <div class="space-y-6">
+      <div class="space-y-5 sm:space-y-6">
         <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800">
           <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
-          <span class="absolute bottom-3 left-3 px-3 py-1 rounded-md text-xs font-mono font-semibold uppercase bg-indigo-600 text-white shadow">
+          <span class="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 px-2.5 py-1 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-mono font-semibold uppercase bg-indigo-600 text-white shadow">
             ${project.badge}
           </span>
         </div>
 
         <div>
-          <h2 id="modal-title" class="text-2xl font-bold text-slate-900 dark:text-white">
+          <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white break-words">
             ${project.title}
           </h2>
           <p class="text-xs font-mono font-medium text-indigo-600 dark:text-indigo-400 mt-1">
             ${project.category}
           </p>
-          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             ${project.overview}
           </p>
         </div>
@@ -249,11 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </h3>
           <ul class="space-y-2">
             ${project.highlights.map(h => `
-              <li class="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300 leading-normal">
                 <span class="w-4 h-4 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 mt-0.5 text-[10px]">
                   <i class="fa-solid fa-check"></i>
                 </span>
-                <span>${h}</span>
+                <span class="break-words">${h}</span>
               </li>
             `).join('')}
           </ul>
@@ -263,21 +269,21 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200 mb-2">
             Technologies Used
           </h3>
-          <div class="flex flex-wrap gap-1.5">
+          <div class="flex flex-wrap gap-1.5 sm:gap-2">
             ${project.techStack.map(tech => `
-              <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-mono bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700">
                 ${tech}
               </span>
             `).join('')}
           </div>
         </div>
 
-        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-end gap-3">
-          <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2.5 sm:gap-3">
+          <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 px-4 py-3 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
             <i class="fa-brands fa-github text-sm"></i>
             <span>GitHub Repository</span>
           </a>
-          <a href="${project.liveDemo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors shadow">
+          <a href="${project.liveDemo}" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 px-5 py-3 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors shadow">
             <span>Launch Live Demo</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>

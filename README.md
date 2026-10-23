@@ -1,6 +1,6 @@
 # Onik Das — Full Stack Web Developer Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://developer-portfolio-task1.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://developer-portfolio-delta-steel.vercel.app/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -12,7 +12,7 @@ A modern, high-performance developer portfolio built from the ground up using **
 
 ## 🚀 Live Demo
 
-- **Production URL**: [https://developer-portfolio-task1.vercel.app/](https://developer-portfolio-task1.vercel.app/) *(or your deployed Vercel URL)*
+- **Production URL**: [https://developer-portfolio-delta-steel.vercel.app/](https://developer-portfolio-delta-steel.vercel.app/)
 - **GitHub Repository**: [https://github.com/OnikTechHub/Developer-Portfolio-Task1](https://github.com/OnikTechHub/Developer-Portfolio-Task1)
 
 ---
@@ -125,7 +125,8 @@ The repository is pre-configured with `vercel.json` for seamless static deployme
 *Full Stack Web Developer*  
 - **GitHub**: [@OnikTechHub](https://github.com/OnikTechHub)  
 - **LinkedIn**: [Onik Das](https://www.linkedin.com/in/onik-das/)  
-- **Email**: [contact.onikdas@gmail.com](mailto:contact.onikdas@gmail.com)
+- **Email**: [onikdas.dev@gmail.com](mailto:onikdas.dev@gmail.com)  
+- **Location**: চট্টগ্রাম, বাংলাদেশ (Chattogram, Bangladesh)
 
 ---
 
